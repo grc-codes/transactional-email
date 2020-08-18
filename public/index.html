@@ -24,7 +24,13 @@
         width: 100%;
         margin: 0;
         font-family: 'Roboto', 'Arial', sans-serif;
-        font-size: 12px;
+        background: #000;
+      }
+
+      .header-row {
+        width: 100%;
+        background: #b83b26;
+        color: #fff;
       }
 
       .container {
@@ -33,12 +39,6 @@
         margin-bottom: 15px;
       }
 
-      .header-row {
-        width: 100%;
-        background: #b83b26;
-        color: #fff;
-      }
-      
       .main-row {
         width: 100%;
       }
@@ -53,49 +53,47 @@
         color: #cdcdcd;
         background: #cdcdcd;
         height: 1px;
-        margin: 0 10px;
+        margin: 0 1.667%;
         border: 0;
       }
 
       .table-item-cell {
         width: 276px;
-        padding: 7px 24px;
+        padding: 7px 4%;
         height: 15px;
       }
 
       .table-price-qty-cell {
-        width: 76px;
+        width: 12.667%;
         text-align: right;
       }
 
       .table-total-cell {
-        width: 106px;
+        width: 17.667%;
         text-align: right;
-        padding-right: 24px;
+        padding-right: 4%;
       }
 
       .table-subtotal-cell {
-        width: 444px;
-        padding: 2px 0 2px 24px;
+        width: 74%;
+        padding: 2px 0 2px 4%;
         text-align: right;
         font-weight: bold;
       }
 
       .table-subprice-cell {
-        width: 108px;
-        padding: 2px 24px 2px 0;
+        width: 18%;
+        padding: 2px 4% 2px 0;
         text-align: right;
       }
 
       .table-left-cell {
-        padding: 2px 0 2px 24px;
-        font-size: 10px;
+        padding: 2px 0 2px 4%;
       }
 
       .table-right-cell {
-        padding: 2px 24px;
+        padding: 2px 4%;
         text-align: right;
-        font-size: 10px;
       }
 
       .table-right-cell a {
@@ -108,6 +106,67 @@
         background: #eee;
       }
 
+      @media only screen and (min-width: 960px) {
+        body {
+          font-size: 12px;
+        }
+        .receipt-container h1 {
+          font-size: 20px;
+        }
+
+        .receipt-container h2 {
+          font-size: 12px;
+        }
+
+        .table-left-cell {
+          font-size: 11px;
+          text-align: right;
+        }
+
+        .table-right-cell {
+          font-size: 11px;
+          text-align: right;
+        }
+
+      }
+
+      @media only screen and (max-width: 960px) {
+        body {
+          font-size: 1.573vw;
+        }
+
+        .receipt-container h1 {
+          font-size: 2.604vw;
+        }
+
+        .receipt-container h2 {
+          font-size: 1.573vw;
+        }
+
+        .table-left-cell {
+          font-size: ;
+        }
+      }
+
+      @media only screen and (max-width: 600px) {
+        body {
+          font-size: 2vw;
+        }
+
+        .container {
+          width: 100% !important;
+          margin: 0 auto;
+          margin-bottom: 15px;
+        }
+
+        .receipt-container h1 {
+          font-size: 3.333vw;
+        }
+
+        .receipt-container h2 {
+          font-size: 2vw;
+        }
+      }
     </style>
   </head>
   <body>
@@ -151,11 +210,11 @@
                       <table class="receipt-container">
                         <tr>
                           <td>
-                            <table style="width: 25%; margin: 10px 20px;">
+                            <table style="width: 25%; margin: 10px 3.333%;">
                               <tr>
                                 <td>
-                                  <h1 style="font-size: 20px; margin: 0;">Your Receipt</h1>
-                                  <h2 style="font-size: 12px; margin: 0; padding: 5px 0;">August 14th, 2020</h2>
+                                  <h1 style="margin: 0;">Your Receipt</h1>
+                                  <h2 style="margin: 0; padding: 5px 0;">August 14th, 2020</h2>
                                 </td>
                               </tr>
                             </table>
@@ -403,10 +462,10 @@
                           <td>
                             <table style="height: 40px;">
                               <tr>
-                                <td style="width: 336px; padding: 8px 0 8px 24px;">
+                                <td style="width: 56%; padding: 8px 0 8px 4%;">
                                   Payment
                                 </td>
-                                <td style="width: 216px; padding: 8px 24px 8px 0; text-align: right;">
+                                <td style="width: 36%; padding: 8px 4% 8px 0; text-align: right;">
                                   $54.77
                                 </td>
                               </tr>
@@ -423,7 +482,7 @@
                             <table style="height: 80px;">
                               <tr>
                                 <td>
-                                  <td style="padding: 0 24px;">
+                                  <td style="padding: 0 4%;">
                                     <p style="margin: 0; font-weight: bold;">
                                       Payment
                                     </p>
@@ -446,7 +505,7 @@
                             <table style="margin: 10px 0 15px 0;">
                               <tr>
                                 <td style="padding: 10px 0 15px 0;">
-                                  <table style="width: 300px; padding: 1px 0;">
+                                  <table style="width: 50%; padding: 1px 0;">
                                     <tr>
                                       <td class="table-left-cell">
                                         Time: 12:55 PM
@@ -505,7 +564,7 @@
                                   </table>
                                 </td>
                                 <td style="vertical-align: top; padding: 10px 0 15px 0;">
-                                  <table style="width: 300px; padding: 1px 0;">
+                                  <table style="width: 50%; padding: 1px 0;">
                                     <tr>
                                       <td class="table-right-cell">
                                       </td>
@@ -564,11 +623,11 @@
                     <td>
                       <table style="background: #00b0ed;">
                         <tr>
-                          <td style="padding: 40px 24px; background: #fafafa;">
-                            <table style="margin: 0 auto; width: 552px;">
+                          <td style="padding: 40px 4%; background: #fafafa;">
+                            <table style="margin: 0 auto; width: 92%;">
                               <tr>
                                 <td>
-                                  <div style="display: flex; width: 240px; margin: 0 auto;">
+                                  <div style="display: flex; width: 40%; margin: 0 auto;">
                                     <a style="color: #fff; text-decoration: none; display: block; width: 100%; height: 100%; target='_blank'; " href="https://www.facebook.com/applebees/">
                                       <img style="margin: 0 auto; width: 58px; height: 58px;" src="/img/fb-icon.png" />
                                     </a>
@@ -600,7 +659,7 @@
                       <table>
                         <tr>
                           <td style="padding: 10px;">
-                            <table style="padding: 10px 24px;">
+                            <table style="padding: 10px 4%;">
                               <tr style="text-align: center;">
                                 <td>
                                   <img style="margin: 0 auto; padding: 30px 0; height: 44px; width: 121px;" src="/img/presto-icon.png" />
@@ -618,7 +677,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td style="width: 600px;">
+                    <td style="width: 100%;">
                       <table style="margin: 20px auto;">
                         <tr>
                           <td style="padding: 10px;">
