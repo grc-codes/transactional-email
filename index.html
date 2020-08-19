@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Applebee's - Your Receipt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700">
+    <style>
+      table {
+        border: 0;
+        padding: 0;
+        border-spacing: 0;
+        border-collapse: collapse;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      td {
+        padding: 0;
+      }
+
+      body {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        font-family: 'Roboto', 'Arial', sans-serif;
+        background: #fff;
+      }
+
+      .header-row {
+        width: 100%;
+        background: #b83b26;
+        color: #fff;
+      }
+
+      .container {
+        width: 600px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+      }
+
+      .main-row {
+        width: 100%;
+      }
+
+      .receipt-container {
+        width: 100%;
+        background: #fafafa;
+        color: #666;
+      }
+
+      .divider {
+        color: #cdcdcd;
+        background: #cdcdcd;
+        height: 1px;
+        margin: 0 1.667%;
+        border: 0;
+      }
+
+      .table-item-cell {
+        width: 276px;
+        padding: 7px 4%;
+        height: 15px;
+      }
+
+      .table-price-qty-cell {
+        width: 12.667%;
+        text-align: right;
+      }
+
+      .table-total-cell {
+        width: 17.667%;
+        text-align: right;
+        padding-right: 4%;
+      }
+
+      .table-subtotal-cell {
+        width: 74%;
+        padding: 2px 0 2px 4%;
+        text-align: right;
+        font-weight: bold;
+      }
+
+      .table-subprice-cell {
+        width: 18%;
+        padding: 2px 4% 2px 0;
+        text-align: right;
+      }
+
+      .table-left-cell {
+        padding: 2px 0 2px 8%;
+      }
+
+      .table-right-cell {
+        padding: 2px 8%;
+        text-align: right;
+        margin: right;
+      }
+
+      .table-right-cell a {
+        text-decoration: none;
+        color: #1155cc;
+      }
+
+      .footer-row {
+        width: 100%;
+        background: #eee;
+      }
+
+      @media only screen and (min-width: 960px) {
+        body {
+          font-size: 12px;
+        }
+        .receipt-container h1 {
+          font-size: 20px;
+        }
+
+        .receipt-container h2 {
+          font-size: 12px;
+        }
+
+        .table-left-cell {
+          font-size: 11px;
+        }
+
+        .table-right-cell {
+          font-size: 11px;
+        }
+
+        .footer-row h2,p {
+          font-size: 13.333px;
+        }
+
+      }
+
+      @media only screen and (max-width: 960px) {
+        body {
+          font-size: 1.563vw;
+        }
+
+        .receipt-container h1 {
+          font-size: 2.604vw;
+        }
+
+        .receipt-container h2 {
+          font-size: 1.563vw;
+        }
+
+        .table-left-cell {
+          font-size: 1.432vw;
+        }
+
+        .table-right-cell {
+          font-size: 1.432vw;
+        }
+
+        .footer-row h2,p {
+          font-size: 1.736vw;
+        }
+      }
+
+      @media only screen and (max-width: 600px) {
+        body {
+          font-size: 2vw;
+        }
+
+        .container {
+          width: 100% !important;
+          margin: 0 auto;
+          margin-bottom: 15px;
+        }
+
+        .receipt-container h1 {
+          font-size: 3.333vw;
+        }
+
+        .receipt-container h2 {
+          font-size: 2vw;
+        }
+
+        .table-left-cell {
+          font-size: 1.833vw;
+        }
+
+        .table-right-cell {
+          font-size: 1.833vw;
+        }
+
+        .footer-row h2,p {
+          font-size: 2.222vw;
+        }
+
+        .footer-row h2,p {
+          font-size: 2.222vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Start of HTML Email -->
+    <table>
+      <tr>
+        <td>
+          <!-- Start of container -->
+          <table class="container">
+            <!-- Start of header row -->
+            <tr>
+              <td>
+                <table class="header-row">
+                  <tr>
+                    <td>
+                      <img src="/img/applebees-logo.png" style="width: 100%; display: block;" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p style="margin: 7px 0 0 0; text-align: center;">
+                        Applebee's - Westland (8448)
+                      </p>
+                      <p style="margin: 0; padding: 6px 0 8px; text-align: center;">
+                        <a href="https://www.google.com/maps/search/10625+West+Colfax+Lakewood,+CO+80226?entry=gmail&source=g" style="text-decoration: none; color: #1155cc;">
+                          10625 West Colfax Lakewood, CO 80226
+                        </a>
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- End of header row -->
+            <!-- Start of main row -->
+            <tr>
+              <td>
+                <table class="main-row">
+                  <tr>
+                    <td>
+                      <table class="receipt-container">
+                        <tr>
+                          <td>
+                            <table style="width: 25%; margin: 10px 3.333%;">
+                              <tr>
+                                <td>
+                                  <h1 style="margin: 0;">Your Receipt</h1>
+                                  <h2 style="margin: 0; padding: 5px 0;">August 14th, 2020</h2>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <hr class="divider">
+                          </td>
+                        </tr>
+                        <tr style="font-weight: bold;">
+                          <td>
+                            <table style="padding: 2px 0; margin: 2px 0;">
+                              <tr>
+                                <td class="table-item-cell">
+                                  Item
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  Price
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  Qty
+                                </td>
+                                <td class="table-total-cell">
+                                  Line Total
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <hr class="divider">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table style="margin: 2px 0;">
+                              <tr>
+                                <td class="table-item-cell">
+                                  PEPSI
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  $2.79
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  1
+                                </td>
+                                <td class="table-total-cell">
+                                  $2.79
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="table-item-cell">
+                                  CHX WONTON 4
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  $8.99
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  1
+                                </td>
+                                <td class="table-total-cell">
+                                  $8.99
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="table-item-cell">
+                                  2 PLATES
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  $0.00
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  1
+                                </td>
+                                <td class="table-total-cell">
+                                  $0.00
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="table-item-cell">
+                                  &nbsp;&nbsp;*FIRST OUT*
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  $0.00
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  1
+                                </td>
+                                <td class="table-total-cell">
+                                  $0.00
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="table-item-cell">
+                                  2 FOR 22PROMO
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  $22.00
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  1
+                                </td>
+                                <td class="table-total-cell">
+                                  $22.00
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="table-item-cell">
+                                  &nbsp;&nbsp;2-4 BONELESS
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  $0.00
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  1
+                                </td>
+                                <td class="table-total-cell">
+                                  $0.00
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="table-item-cell">
+                                  &nbsp;&nbsp;2-4 CHZ BURG
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  $0.00
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  1
+                                </td>
+                                <td class="table-total-cell">
+                                  $0.00
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="table-item-cell">
+                                  &nbsp;&nbsp;2-4 CHZ BURG
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  $0.00
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  1
+                                </td>
+                                <td class="table-total-cell">
+                                  $0.00
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="table-item-cell">
+                                  SD GARL MASH POTS
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  $2.19
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  1
+                                </td>
+                                <td class="table-total-cell">
+                                  $2.19
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="table-item-cell">
+                                  TRIP CHOC MELT
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  $6.49
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  1
+                                </td>
+                                <td class="table-total-cell">
+                                  $6.49
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="table-item-cell">
+                                  &nbsp;&nbsp;2 SPOON
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  $0.00
+                                </td>
+                                <td class="table-price-qty-cell">
+                                  1
+                                </td>
+                                <td class="table-total-cell">
+                                  $0.00
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <hr class="divider">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table style="margin: 7px 0;">
+                              <tr>
+                                <td class="table-subtotal-cell">
+                                  Subtotal
+                                </td>
+                                <td class="table-subprice-cell">
+                                  $42.46
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="table-subtotal-cell">
+                                  Tax
+                                </td>
+                                <td class="table-subprice-cell">
+                                  $3.18
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="table-subtotal-cell">
+                                  Tip
+                                </td>
+                                <td class="table-subprice-cell">
+                                  $9.13
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="table-subtotal-cell">
+                                  Total
+                                </td>
+                                <td class="table-subprice-cell">
+                                  $54.77
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <hr class="divider">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table style="height: 40px;">
+                              <tr>
+                                <td style="width: 56%; padding: 8px 0 8px 4%;">
+                                  Payment
+                                </td>
+                                <td style="width: 36%; padding: 8px 4% 8px 0; text-align: right;">
+                                  $54.77
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <hr class="divider">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table style="height: 80px;">
+                              <tr>
+                                <td>
+                                  <td style="padding: 0 4%;">
+                                    <p style="margin: 0; font-weight: bold;">
+                                      Payment
+                                    </p>
+                                    <p style="margin: 0;">
+                                      Credit
+                                    </p>
+                                  </td>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <hr class="divider">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table style="margin: 10px 0 15px 0;">
+                              <tr>
+                                <td style="padding: 10px 0 15px 0; width: 50%; text-align: right;">
+                                  <table style="padding: 1px 0;">
+                                    <tr>
+                                      <td class="table-left-cell">
+                                        Time: 12:55 PM
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="table-left-cell">
+                                        Check: 563707
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="table-left-cell">
+                                        Table: 50
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="table-left-cell">
+                                        Auth: 185954
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="table-left-cell">
+                                        Card: XXXXXXXXXXXX0341
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="table-left-cell">
+                                        AID: A0000000031010
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="table-left-cell">
+                                        CVM: NO_CVM
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="table-left-cell">
+                                        IAD: 06010A03A08000
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="table-left-cell">
+                                        TSI: 6800
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="table-left-cell">
+                                        TVR: 8080008000
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="table-left-cell">
+                                        Cryptogram: 124904F8038DC3B5
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                <td style="width: 50%; text-align: right; vertical-align: top; padding: 10px 0 15px 0;">
+                                  <table style="padding: 1px 0;">
+                                    <tr>
+                                      <td class="table-right-cell">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="table-right-cell">
+                                        Applebee's - Westland (8448)
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="table-right-cell">
+                                        <a href="https://www.google.com/maps/search/10625+West+Colfax+%0D%0A+++++++++++++++++++++++++++++++++++++++++++++++++++++++++Lakewood,+CO+80226?entry=gmail&source=g">
+                                          10625 West Colfax
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="table-right-cell">
+                                        <a href="https://www.google.com/maps/search/10625+West+Colfax+%0D%0A+++++++++++++++++++++++++++++++++++++++++++++++++++++++++Lakewood,+CO+80226?entry=gmail&source=g">
+                                          Lakewood, CO 80226
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="table-right-cell">
+                                        <a style="color: #666; text-decoration: none;" target="_blank" href="tel:303-462-1782">
+                                          303-462-1782
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="table-right-cell">
+                                        <a style="color: #666; text-decoration: none;" href="http://www.applebees.com" target="_blank">
+                                          www.applebees.com
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- End of main row -->
+            <!-- Start of social row -->
+            <tr>
+              <td>
+                <table class="social-row">
+                  <tr>
+                    <td>
+                      <table style="background: #00b0ed;">
+                        <tr>
+                          <td style="padding: 40px 4%; background: #fafafa;">
+                            <table style="margin: 0 auto; width: 92%;">
+                              <tr>
+                                <td>
+                                  <div style="display: flex; width: 40%; margin: 0 auto;">
+                                    <a style="color: #fff; text-decoration: none; display: block; width: 100%; height: 100%; target='_blank'; " href="https://www.facebook.com/applebees/">
+                                      <img style="margin: 0 auto; width: 58px; height: 58px;" src="/img/fb-icon.png" />
+                                    </a>
+                                    <a style="color: #fff; text-decoration: none; display: block; width: 100%; height: 100%; target='_blank'; " href="https://twitter.com/Applebees/">
+                                      <img style="margin: 0 auto; width: 58px; height: 58px;" src="/img/tw-icon.png" />
+                                    </a>
+                                    <a style="color: #fff; text-decoration: none; display: block; width: 100%; height: 100%; target='_blank'; " href="https://www.instagram.com/applebees/?hl=en">
+                                      <img style="margin: 0 auto; width: 58px; height: 58px;" src="/img/ig-icon.png" />
+                                    </a>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- End of social row -->
+            <!-- Start of footer row -->
+            <tr>
+              <td>
+                <table class="footer-row">
+                  <tr>
+                    <td>
+                      <table>
+                        <tr>
+                          <td style="padding: 10px;">
+                            <table style="padding: 10px 4%;">
+                              <tr style="text-align: center;">
+                                <td>
+                                  <img style="margin: 0 auto; padding: 30px 0; height: 44px; width: 121px;" src="/img/presto-icon.png" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <hr class="divider">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 100%;">
+                      <table style="margin: 20px auto;">
+                        <tr>
+                          <td style="padding: 10px;">
+                            <h2 style="padding: 2px; margin: 0 auto; text-align: center; font-weight: bold; color: #666;">Thanks for using the Presto!</h2>
+                            <p style="color: #666; text-decoration: none; padding: 2px; text-align: center; margin: 0 auto;">Did you like the Presto tablet? Learn more at <b><a style="text-decoration: none; color: #666;" href="http://presto.com/">presto.com</a></b></p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- End of footer row -->
+          </table>
+          <!-- End of container -->
+        </td>
+      </tr>
+    </table>
+    <!-- End of HTML Email -->
+  </body>
+</html>
