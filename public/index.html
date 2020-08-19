@@ -24,7 +24,7 @@
         width: 100%;
         margin: 0;
         font-family: 'Roboto', 'Arial', sans-serif;
-        background: #000;
+        background: #fff;
       }
 
       .header-row {
@@ -88,12 +88,13 @@
       }
 
       .table-left-cell {
-        padding: 2px 0 2px 4%;
+        padding: 2px 0 2px 8%;
       }
 
       .table-right-cell {
-        padding: 2px 4%;
+        padding: 2px 8%;
         text-align: right;
+        margin: right;
       }
 
       .table-right-cell a {
@@ -120,19 +121,21 @@
 
         .table-left-cell {
           font-size: 11px;
-          text-align: right;
         }
 
         .table-right-cell {
           font-size: 11px;
-          text-align: right;
+        }
+
+        .footer-row h2,p {
+          font-size: 13.333px;
         }
 
       }
 
       @media only screen and (max-width: 960px) {
         body {
-          font-size: 1.573vw;
+          font-size: 1.563vw;
         }
 
         .receipt-container h1 {
@@ -140,11 +143,19 @@
         }
 
         .receipt-container h2 {
-          font-size: 1.573vw;
+          font-size: 1.563vw;
         }
 
         .table-left-cell {
-          font-size: ;
+          font-size: 1.432vw;
+        }
+
+        .table-right-cell {
+          font-size: 1.432vw;
+        }
+
+        .footer-row h2,p {
+          font-size: 1.736vw;
         }
       }
 
@@ -165,6 +176,22 @@
 
         .receipt-container h2 {
           font-size: 2vw;
+        }
+
+        .table-left-cell {
+          font-size: 1.833vw;
+        }
+
+        .table-right-cell {
+          font-size: 1.833vw;
+        }
+
+        .footer-row h2,p {
+          font-size: 2.222vw;
+        }
+
+        .footer-row h2,p {
+          font-size: 2.222vw;
         }
       }
     </style>
@@ -504,8 +531,8 @@
                           <td>
                             <table style="margin: 10px 0 15px 0;">
                               <tr>
-                                <td style="padding: 10px 0 15px 0;">
-                                  <table style="width: 50%; padding: 1px 0;">
+                                <td style="padding: 10px 0 15px 0; width: 50%; text-align: right;">
+                                  <table style="padding: 1px 0;">
                                     <tr>
                                       <td class="table-left-cell">
                                         Time: 12:55 PM
@@ -563,8 +590,8 @@
                                     </tr>
                                   </table>
                                 </td>
-                                <td style="vertical-align: top; padding: 10px 0 15px 0;">
-                                  <table style="width: 50%; padding: 1px 0;">
+                                <td style="width: 50%; text-align: right; vertical-align: top; padding: 10px 0 15px 0;">
+                                  <table style="padding: 1px 0;">
                                     <tr>
                                       <td class="table-right-cell">
                                       </td>
@@ -681,8 +708,8 @@
                       <table style="margin: 20px auto;">
                         <tr>
                           <td style="padding: 10px;">
-                            <h2 style="padding: 2px; margin: 0 auto; text-align: center; font-weight: bold; font-size: 10pt; color: #666;">Thanks for using the Presto!</h2>
-                            <p style="color: #666; text-decoration: none; padding: 2px; font-size: 10pt; text-align: center; margin: 0 auto;">Did you like the Presto tablet? Learn more at <b><a style="text-decoration: none; color: #666;" href="http://presto.com/">presto.com</a></b></p>
+                            <h2 style="padding: 2px; margin: 0 auto; text-align: center; font-weight: bold; color: #666;">Thanks for using the Presto!</h2>
+                            <p style="color: #666; text-decoration: none; padding: 2px; text-align: center; margin: 0 auto;">Did you like the Presto tablet? Learn more at <b><a style="text-decoration: none; color: #666;" href="http://presto.com/">presto.com</a></b></p>
                           </td>
                         </tr>
                       </table>
