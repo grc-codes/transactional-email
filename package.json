@@ -1,0 +1,21 @@
+{
+  "name": "transactional-email",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sw.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grc-codes/transactional-email.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grc-codes/transactional-email/issues"
+  },
+  "homepage": "https://github.com/grc-codes/transactional-email#readme"
+}
